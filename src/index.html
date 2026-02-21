@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>家計簿アプリ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <h1>家計簿アプリ</h1>
+      <div class="month-controls">
+        <button id="prevMonth">◀</button>
+        <input id="monthPicker" type="month" />
+        <button id="nextMonth">▶</button>
+      </div>
+      <div class="actions">
+        <button id="importCsvBtn">CSV取込</button>
+        <button id="exportCsvBtn">CSV出力</button>
+        <button id="addBtn" class="primary">＋追加</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section>
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>日付</th>
+                <th>種別</th>
+                <th>カテゴリ</th>
+                <th>金額</th>
+                <th>メモ</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="transactionsBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card summary">
+          <h2>月次サマリ</h2>
+          <p>収入合計: <strong id="incomeTotal">¥0</strong></p>
+          <p>支出合計: <strong id="expenseTotal">¥0</strong></p>
+          <p>収支差額: <strong id="balanceTotal">¥0</strong></p>
+        </div>
+        <div class="card">
+          <h2>カテゴリ別支出</h2>
+          <ul id="categoryList"></ul>
+        </div>
+      </aside>
+    </main>
+
+    <dialog id="transactionDialog">
+      <form id="transactionForm" method="dialog">
+        <h2 id="dialogTitle">取引追加</h2>
+        <label>日付 <input name="date" type="date" required /></label>
+        <label>
+          種別
+          <select name="type" required>
+            <option value="income">収入</option>
+            <option value="expense" selected>支出</option>
+          </select>
+        </label>
+        <label>
+          カテゴリ
+          <select name="category" id="categorySelect" required></select>
+        </label>
+        <label>金額 <input name="amount" type="number" min="1" max="9999999" required /></label>
+        <label>メモ <input name="memo" type="text" maxlength="200" /></label>
+        <p id="formError" class="error"></p>
+        <menu>
+          <button id="deleteBtn" type="button" class="danger" hidden>削除</button>
+          <button type="button" id="cancelBtn">キャンセル</button>
+          <button type="submit" class="primary">保存</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

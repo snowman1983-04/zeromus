@@ -1,0 +1,14 @@
+{
+  "name": "zeromus-kakeibo",
+  "version": "1.0.0",
+  "description": "ローカル完結の家計簿Electronアプリ",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "lint": "node --check main.js && node --check preload.js && node --check src/db.js && node --check src/renderer.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.1",
+    "electron": "^35.0.0"
+  }
+}
