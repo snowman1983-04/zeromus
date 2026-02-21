@@ -163,6 +163,33 @@
         font-size: 0.8rem;
       }
 
+
+      .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .photo-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      .photo-card img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .photo-card figcaption {
+        padding: 0.75rem 0.9rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
       .form-wrap {
         background: var(--surface);
         border: 1px solid var(--border);
@@ -212,6 +239,15 @@
           grid-template-columns: 1fr;
         }
 
+
+        .photo-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .photo-card img {
+          height: 210px;
+        }
+
         iframe {
           height: 70vh;
           min-height: 480px;
@@ -223,45 +259,70 @@
     <header class="hero">
       <div class="container hero-inner">
         <h1>HIROSAKI Local Foundry β</h1>
-        <p>雇用創出ではなく、若年層の起業・自走を支援する実験的プラットフォーム</p>
+        <p>雇用の受け皿を増やすだけではなく、弘前で挑戦したい若い世代が、自分の足で立ち上がるための実践の場です。</p>
         <a class="cta" href="#form-section">意見交換する</a>
       </div>
     </header>
 
     <main>
+
+      <section aria-labelledby="local-scenes">
+        <div class="container">
+          <h2 id="local-scenes">弘前の風景とともに</h2>
+          <div class="photo-grid">
+            <figure class="photo-card">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hirosaki_apple.jpg" alt="弘前のりんご畑" loading="lazy" />
+              <figcaption>りんごの季節に育つ、弘前らしい手触りのある挑戦。</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Hirosaki_Castle_and_Cherry_Blossoms.jpg" alt="弘前城と桜" loading="lazy" />
+              <figcaption>弘前城と桜の景色のように、地域に根づく価値を次世代へ。</figcaption>
+            </figure>
+            <figure class="photo-card">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Hirosaki_Neputa_Festival_2018.jpg" alt="弘前ねぷたまつり" loading="lazy" />
+              <figcaption>ねぷたの熱量を、地域で動く新しい事業づくりへつなげる。</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <section aria-labelledby="background">
         <div class="container card">
-          <h2 id="background">背景</h2>
+          <h2 id="background">なぜ、いま必要なのか</h2>
           <p>
-            地域の若年層には、既存の雇用モデルへそのまま適合しにくい人材が増えています。一方で、地域には小さな改善や価値創出の余地が多く残されており、担い手が不足しています。HIROSAKI
-            Local Foundry βは、このギャップを実践の場づくりで埋めるための取り組みです。
+            弘前には、働く意欲やアイデアがあっても、既存の就職の枠だけでは力を発揮しきれない若者がいます。
+            その一方で、地域には「少し手を入れればもっと良くなる」仕事やテーマが数多く残っています。
+            HIROSAKI Local Foundry βは、この二つを結び、地域の中で小さく試して育てるための土台をつくります。
           </p>
         </div>
       </section>
 
       <section aria-labelledby="purpose">
         <div class="container card">
-          <h2 id="purpose">目的</h2>
-          <p>起業・自走支援を軸に、地域課題に対する小規模実験を継続的に行い、再現可能な形で育てていくことを目指します。最終的には、国民金融公庫の創業支援やクラウドファンディングの活用につながる起業ゴールを想定しています。</p>
+          <h2 id="purpose">この取り組みの目的</h2>
+          <p>私たちの目的は、若年層の起業と自走を、机上ではなく現場で支えることです。
+          行政依存に偏らない民間主導の体制で、小さな実験を積み重ねます。
+          最終的には、国民金融公庫の創業支援やクラウドファンディングの活用まで見据え、事業として立ち上がるところまで伴走します。</p>
         </div>
       </section>
 
       <section aria-labelledby="mechanism">
         <div class="container">
-          <h2 id="mechanism">仕組み</h2>
+          <h2 id="mechanism">進め方の設計</h2>
           <div class="grid two">
             <div class="card">
               <ul>
-                <li>プロジェクト単位で実践機会を設計し、参加者が現場で試せる状態をつくります。</li>
-                <li>方向性の整理と仮説設計は運営が担い、意思決定を支援します。</li>
-                <li>実行は若手主体で進め、丸投げではなく伴走型で責任を育てます。</li>
-                <li>小さく検証し、成果が見えた取り組みから段階的に展開します。</li>
+                <li>プロジェクトごとに現場の実践機会を用意し、参加者がまず一歩を踏み出せる形にします。</li>
+                <li>テーマの整理や仮説づくりは運営が担当し、迷わず進めるための土台を整えます。</li>
+                <li>実行の主役は若手です。丸投げにはせず、伴走しながら当事者としての判断力と責任を育てます。</li>
+                <li>まずは小さく試し、手応えが出たものだけを段階的に広げます。</li>
               </ul>
             </div>
             <div class="card">
-              <h3>運営の役割</h3>
+              <h3>運営チームの役割</h3>
               <p>
-                ルール整備・関係者調整・評価フレームづくりを通じて、失敗が学びになる環境を維持します。現場任せにしない設計で、挑戦と改善のサイクルを支えます。
+                運営は、関係者との調整や進行管理、振り返りの設計を担います。
+                現場任せにせず、挑戦と改善が続く状態をつくることが役割です。
               </p>
             </div>
           </div>
@@ -270,32 +331,32 @@
 
       <section aria-labelledby="examples">
         <div class="container">
-          <h2 id="examples">できること例</h2>
+          <h2 id="examples">こんな実践から始めます</h2>
           <div class="example-list">
-            <article class="example-item">地域店舗の集客改善ミニ実験</article>
-            <article class="example-item">観光導線の情報発信プロトタイプ</article>
-            <article class="example-item">一次産業の販路拡大テスト販売</article>
-            <article class="example-item">高校・大学生向け起業体験ワーク</article>
-            <article class="example-item">地域イベントの運営DX試行</article>
+            <article class="example-item">地域店の集客を改善する小さな実証</article>
+            <article class="example-item">観光の回遊導線を整える情報発信づくり</article>
+            <article class="example-item">一次産業の販路を広げる試験販売</article>
+            <article class="example-item">高校生・大学生向けの起業体験プログラム</article>
+            <article class="example-item">地域イベント運営のデジタル改善</article>
           </div>
         </div>
       </section>
 
       <section aria-labelledby="process">
         <div class="container">
-          <h2 id="process">進め方（3ヶ月単位）</h2>
+          <h2 id="process">3ヶ月ごとの進行イメージ</h2>
           <ol class="timeline grid three">
             <li>
-              <strong>1ヶ月目：探索・設計</strong><br />
-              テーマ選定、関係者ヒアリング、実験計画の策定
+              <strong>1ヶ月目：テーマを見つけ、形にする</strong><br />
+              テーマを絞り、関係者の声を聞き、実験計画を組み立てます。
             </li>
             <li>
-              <strong>2ヶ月目：実行・検証</strong><br />
-              小規模な実装を実施し、数値と現場の声で効果を確認
+              <strong>2ヶ月目：実際に動かして確かめる</strong><br />
+              小さく実行し、数字と現場の反応の両方で手応えを見ます。
             </li>
             <li>
-              <strong>3ヶ月目：整理・展開判断</strong><br />
-              学びをドキュメント化し、継続・拡張・終了を判断
+              <strong>3ヶ月目：学びを整理し、次を決める</strong><br />
+              結果を言語化し、継続・拡張・終了を冷静に判断します。
             </li>
           </ol>
         </div>
@@ -303,8 +364,8 @@
 
       <section id="form-section" aria-labelledby="form-title">
         <div class="container">
-          <h2 id="form-title">意見交換フォーム</h2>
-          <p style="margin-bottom: 1rem">以下のフォームは埋め込み先を後から差し替えやすいよう、`src`のみ更新できる構造にしています。</p>
+          <h2 id="form-title">まずは気軽に、意見交換から</h2>
+          <p style="margin-bottom: 1rem">ご関心のある方は、下記フォームからご連絡ください。活動内容の相談や参加の打診も歓迎しています。</p>
           <div class="form-wrap">
             <iframe title="HIROSAKI Local Foundry β お問い合わせフォーム" src="https://docs.google.com/forms/d/e/1FAIpQLSex1Kz_R50Tjq0ZeTM4ZZ-_-l2LMLDq1S45z1sN4rbj_uEU2Q/viewform?embedded=true" width="100%" height="900" loading="lazy"></iframe>
           </div>
@@ -314,9 +375,9 @@
 
     <footer>
       <div class="container footer-note">
-        <p>本ページは HIROSAKI Local Foundry のβ版案内です。</p>
-        <p>本取り組みは特定の政治・宗教団体に属するものではありません。</p>
-        <p>参加に際して、無理な拘束や過度な負担を求めることはありません。</p>
+        <p>このページは、HIROSAKI Local Foundry β の試験公開版です。</p>
+        <p>本取り組みは、特定の政治団体・宗教団体の活動を目的とするものではありません。</p>
+        <p>参加は本人の意思を最優先とし、無理な拘束や過度な負担を求めることはありません。</p>
       </div>
     </footer>
   </body>
