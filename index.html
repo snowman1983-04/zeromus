@@ -192,6 +192,24 @@
         margin-top: 0.6rem;
       }
 
+
+      .flow-visual {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 1rem;
+      }
+
+      .flow-visual svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .flow-visual {
+        overflow-x: auto;
+      }
+
       .form-wrap {
         background: var(--surface);
         border: 1px solid var(--border);
@@ -295,7 +313,7 @@
         <div class="container card">
           <h2 id="team">代表・アドバイザー紹介</h2>
           <div class="profile-card">
-            <img src="https://example.com/representative.jpg" alt="代表 山本寿仁" loading="lazy" />
+            <img src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=320&h=320&q=80" alt="代表 山本寿仁" loading="lazy" />
             <div class="profile-text">
               <p><strong>代表：山本 寿仁</strong><br />弘前に根ざしたAI教育コンサルタントとして活動。本プロジェクトでは、弘前在住のファシリテーターとして現場の対話と実践をつなぎます。活動紹介は <a href="https://note.com/yamamotokazuto" target="_blank" rel="noopener noreferrer">note（https://note.com/yamamotokazuto）</a> をご覧ください。</p>
               <p><strong>戦略アドバイザー：Eliza WS（ハンドルネーム）</strong><br />機械工学を専門とする、国際的に著名なAIエンジニア。実装視点と戦略視点の両面から、プロジェクト設計に参画しています。</p>
@@ -357,6 +375,48 @@
               結果を言語化し、継続・拡張・終了を冷静に判断します。
             </li>
           </ol>
+        </div>
+      </section>
+
+
+      <section aria-labelledby="flow">
+        <div class="container">
+          <h2 id="flow">相談から3ヶ月後までの流れ（イメージ図）</h2>
+          <div class="flow-visual" role="img" aria-label="フォーム相談から顔合わせ、Discordでの週1打ち合わせを経て3ヶ月後に実験または起業手続きに進む流れ">
+            <svg viewBox="0 0 1200 270" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L9,3 z" fill="#2563eb" />
+                </marker>
+              </defs>
+              <rect x="20" y="45" width="250" height="160" rx="14" fill="#eff6ff" stroke="#bfdbfe" />
+              <text x="145" y="90" text-anchor="middle" font-size="24" font-weight="700" fill="#1e3a8a">① フォームで相談</text>
+              <text x="145" y="125" text-anchor="middle" font-size="18" fill="#334155">まずはオンラインで</text>
+              <text x="145" y="150" text-anchor="middle" font-size="18" fill="#334155">現在地と課題を共有</text>
+
+              <line x1="272" y1="125" x2="340" y2="125" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)" />
+
+              <rect x="350" y="45" width="250" height="160" rx="14" fill="#f0fdf4" stroke="#bbf7d0" />
+              <text x="475" y="90" text-anchor="middle" font-size="24" font-weight="700" fill="#166534">② 弘前市内で顔合わせ</text>
+              <text x="475" y="125" text-anchor="middle" font-size="18" fill="#334155">対面で方向性を確認し</text>
+              <text x="475" y="150" text-anchor="middle" font-size="18" fill="#334155">実験テーマを明確化</text>
+
+              <line x1="602" y1="125" x2="670" y2="125" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)" />
+
+              <rect x="680" y="45" width="250" height="160" rx="14" fill="#fff7ed" stroke="#fed7aa" />
+              <text x="805" y="90" text-anchor="middle" font-size="22" font-weight="700" fill="#9a3412">③ Discordで週1打合せ</text>
+              <text x="805" y="125" text-anchor="middle" font-size="18" fill="#334155">アドバイザーと進捗確認</text>
+              <text x="805" y="150" text-anchor="middle" font-size="18" fill="#334155">課題解決を反復</text>
+
+              <line x1="932" y1="125" x2="1000" y2="125" stroke="#2563eb" stroke-width="4" marker-end="url(#arrow)" />
+
+              <rect x="1010" y="45" width="170" height="160" rx="14" fill="#faf5ff" stroke="#e9d5ff" />
+              <text x="1095" y="88" text-anchor="middle" font-size="21" font-weight="700" fill="#6b21a8">④ 3ヶ月後</text>
+              <text x="1095" y="123" text-anchor="middle" font-size="17" fill="#334155">実験の展開</text>
+              <text x="1095" y="148" text-anchor="middle" font-size="17" fill="#334155">または</text>
+              <text x="1095" y="173" text-anchor="middle" font-size="17" fill="#334155">起業手続きへ</text>
+            </svg>
+          </div>
         </div>
       </section>
 
