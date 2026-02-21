@@ -60,7 +60,9 @@
 
       .hero {
         padding: 7rem 0 6rem;
-        background: linear-gradient(180deg, #eef2ff 0%, #f7f8fa 100%);
+        background:
+          linear-gradient(180deg, rgba(13, 31, 54, 0.58) 0%, rgba(13, 31, 54, 0.42) 60%, rgba(13, 31, 54, 0.35) 100%),
+          url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1800&q=80") center / cover no-repeat;
       }
 
       .hero-inner {
@@ -70,6 +72,12 @@
       .hero p {
         font-size: clamp(1rem, 2.4vw, 1.2rem);
         margin-bottom: 2rem;
+        color: #eef2ff;
+      }
+
+      .hero h1 {
+        color: #ffffff;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
       }
 
       .cta {
@@ -164,32 +172,6 @@
       }
 
 
-      .photo-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1rem;
-      }
-
-      .photo-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        overflow: hidden;
-      }
-
-      .photo-card img {
-        width: 100%;
-        height: 230px;
-        object-fit: cover;
-        display: block;
-      }
-
-      .photo-card figcaption {
-        padding: 0.75rem 0.9rem;
-        color: var(--muted);
-        font-size: 0.92rem;
-      }
-
       .form-wrap {
         background: var(--surface);
         border: 1px solid var(--border);
@@ -239,15 +221,6 @@
           grid-template-columns: 1fr;
         }
 
-
-        .photo-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .photo-card img {
-          height: 210px;
-        }
-
         iframe {
           height: 70vh;
           min-height: 480px;
@@ -265,26 +238,6 @@
     </header>
 
     <main>
-
-      <section aria-labelledby="local-scenes">
-        <div class="container">
-          <h2 id="local-scenes">弘前の風景とともに</h2>
-          <div class="photo-grid">
-            <figure class="photo-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Hirosaki_apple.jpg" alt="弘前のりんご畑" loading="lazy" />
-              <figcaption>りんごの季節に育つ、弘前らしい手触りのある挑戦。</figcaption>
-            </figure>
-            <figure class="photo-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Hirosaki_Castle_and_Cherry_Blossoms.jpg" alt="弘前城と桜" loading="lazy" />
-              <figcaption>弘前城と桜の景色のように、地域に根づく価値を次世代へ。</figcaption>
-            </figure>
-            <figure class="photo-card">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Hirosaki_Neputa_Festival_2018.jpg" alt="弘前ねぷたまつり" loading="lazy" />
-              <figcaption>ねぷたの熱量を、地域で動く新しい事業づくりへつなげる。</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
 
       <section aria-labelledby="background">
         <div class="container card">
