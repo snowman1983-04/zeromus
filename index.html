@@ -172,6 +172,26 @@
       }
 
 
+
+      .profile-card {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 1.2rem;
+        align-items: center;
+      }
+
+      .profile-card img {
+        width: 140px;
+        height: 140px;
+        border-radius: 12px;
+        object-fit: cover;
+        border: 1px solid var(--border);
+      }
+
+      .profile-text p + p {
+        margin-top: 0.6rem;
+      }
+
       .form-wrap {
         background: var(--surface);
         border: 1px solid var(--border);
@@ -221,6 +241,16 @@
           grid-template-columns: 1fr;
         }
 
+
+        .profile-card {
+          grid-template-columns: 1fr;
+        }
+
+        .profile-card img {
+          width: 120px;
+          height: 120px;
+        }
+
         iframe {
           height: 70vh;
           min-height: 480px;
@@ -233,7 +263,7 @@
       <div class="container hero-inner">
         <h1>HIROSAKI Local Foundry β</h1>
         <p>雇用の受け皿を増やすだけではなく、弘前で挑戦したい若い世代が、自分の足で立ち上がるための実践の場です。</p>
-        <a class="cta" href="#form-section">意見交換する</a>
+        <a class="cta" href="#form-section">連絡する</a>
       </div>
     </header>
 
@@ -255,7 +285,22 @@
           <h2 id="purpose">この取り組みの目的</h2>
           <p>私たちの目的は、若年層の起業と自走を、机上ではなく現場で支えることです。
           行政依存に偏らない民間主導の体制で、小さな実験を積み重ねます。
+          また、本プロジェクトの受講料は無料です。
           最終的には、国民金融公庫の創業支援やクラウドファンディングの活用まで見据え、事業として立ち上がるところまで伴走します。</p>
+        </div>
+      </section>
+
+
+      <section aria-labelledby="team">
+        <div class="container card">
+          <h2 id="team">代表・アドバイザー紹介</h2>
+          <div class="profile-card">
+            <img src="https://example.com/representative.jpg" alt="代表 山本寿仁" loading="lazy" />
+            <div class="profile-text">
+              <p><strong>代表：山本 寿仁</strong><br />弘前に根ざしたAI教育コンサルタントとして活動。本プロジェクトでは、弘前在住のファシリテーターとして現場の対話と実践をつなぎます。活動紹介は <a href="https://note.com/yamamotokazuto" target="_blank" rel="noopener noreferrer">note（https://note.com/yamamotokazuto）</a> をご覧ください。</p>
+              <p><strong>戦略アドバイザー：Eliza WS（ハンドルネーム）</strong><br />機械工学を専門とする、国際的に著名なAIエンジニア。実装視点と戦略視点の両面から、プロジェクト設計に参画しています。</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -317,7 +362,7 @@
 
       <section id="form-section" aria-labelledby="form-title">
         <div class="container">
-          <h2 id="form-title">まずは気軽に、意見交換から</h2>
+          <h2 id="form-title">まずは気軽に、ご連絡を</h2>
           <p style="margin-bottom: 1rem">ご関心のある方は、下記フォームからご連絡ください。活動内容の相談や参加の打診も歓迎しています。</p>
           <div class="form-wrap">
             <iframe title="HIROSAKI Local Foundry β お問い合わせフォーム" src="https://docs.google.com/forms/d/e/1FAIpQLSex1Kz_R50Tjq0ZeTM4ZZ-_-l2LMLDq1S45z1sN4rbj_uEU2Q/viewform?embedded=true" width="100%" height="900" loading="lazy"></iframe>
